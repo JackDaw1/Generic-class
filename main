@@ -1,0 +1,31 @@
+import UIKit
+
+// create a generic class
+class Stack<Element> {
+    
+    var elements: [Element] = []
+    
+    public init(withObject object: Any) {
+         }
+    
+    func push(_ element: Element) {
+        elements.append(element)
+    }
+    
+    func pop() -> Element? {
+        return elements.popLast()
+    }
+    
+    func peek() -> Element? {
+        return elements.last
+    }
+}
+
+var intStack = Stack<Int>(withObject: [1, 2, 3])
+
+intStack.push(4)
+intStack.push(5)
+intStack.pop()
+intStack.peek()
+
+
